@@ -23,7 +23,7 @@ guardar(){
  }
   // para ir probando agregue un boton de eliminar
  eliminar(i: number): void{
-  var answer = confirm ('Esta seguro eliminarlo?');
+  var answer = confirm ('Esta seguro de eliminarlo?');
   if(answer){
     this.productos.splice(i,1);
   }
