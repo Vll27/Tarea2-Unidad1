@@ -1,0 +1,51 @@
+<div class="container app">
+    <div class="title">
+        <h1 class="font-italic">Registro de Productos</h1>
+        <hr>
+    </div>
+    <div>
+        <form class="form-group">
+            <label> Nombre: </label>
+            <input type="text"  [(ngModel)]="producto.nombre" name="producto.nombre" class="form-control-sm"><br>
+            <label> Precio: </label>
+            <input type="number" [(ngModel)]="producto.direccion" name="producto.direccion" class="form-control-sm" placeholder="C$"><br>
+            <label> Existencia: </label>
+            <input type="date" [(ngModel)]="producto.existencia" name="producto.existencia" class="form-control-sm"><br>
+            <label> Fecha_vencimiento: </label>
+            <input type="date" [(ngModel)]="producto.fecha_vencimiento" name="producto.fecha_vencimiento" class="form-control-sm"><br>
+            <br><br>
+            <hr>
+            <div class="form-group">
+                <button class="btn btn-success" (click)="guardar()">Enviar</button>
+            </div>
+        </form>
+        
+    <div class="col-md-12">
+        <div class="title">
+            <h1 class="font-italic">Productos Ingresados</h1>
+            <hr>
+        </div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Existencia</th>
+                        <th>Fecha_vencimiento</th>
+                        <th>Opcion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let producto of productos; let i = index;">
+                    <td>{{producto.nombre}}</td>
+                    <td>C$ {{producto.direccion}}</td>
+                    <td>{{producto.existencia}}</td>
+                    <td>{{producto.fecha_vencimiento}}</td>
+                    <td><button class="btn btn-danger" (click)="eliminar(i)">Eliminar</button></td>
+                  </tr>
+                </tbody>
+            </table>
+       </div>
+    </div>
+    </div>
+    

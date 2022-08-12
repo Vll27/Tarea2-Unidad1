@@ -1,0 +1,12 @@
+form{padding: 2%;}
+.title{ padding: 3%;}
+label{margin: 1%;}
+.btn{margin-top: 2%; margin: 2%; }
+table{padding: 2%;}
+
+.app{
+    border-radius: 4px;
+    margin-top: 20px ;
+    padding: 30px;
+    background: #fff;
+}
